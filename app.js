@@ -47,14 +47,12 @@ app.put("/v1/explorers/:id",(req,res)=>{
     res.status(200).json({message: "updated"})
 })
 
-app.delete("v1/",(req,res)=>{
+app.delete("/v1/explorers/:id",(req,res)=>{
    
     console.log(`Api Explorers DELETE request ${new Date()}`);
     console.log(`delete explorer with id ${req.params.id}`);
     const requestBody = req.body
     res.status(200).json({message: "deleted"})
-
-
 
 })
 
