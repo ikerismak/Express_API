@@ -38,3 +38,17 @@ app.post("/v1/explorers",(req,res)=>{
     res.status(201).json({message: "created"})
 })
 
+
+app.put("/v1/explorers/:id",(req,res)=>{
+    console.log(`Api Explorers PUT request ${new Date()}`);
+    console.log(`Update explorer with ID ${req.params.id}`)
+    const requestBody = req.body
+    console.log(req.body);
+    res.status(200).json({message: "updated"})
+})
+
+app.delete("v1/",(req,res)=>{
+    console.log(`Api delete metod`);
+
+})
+
